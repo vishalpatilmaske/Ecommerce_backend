@@ -8,7 +8,7 @@ import {
 import Authentication from "../controller/Authentication.js";
 
 const router = Router();
-router.route("/singup").post(signupHandler);
+router.route("/signup").post(signupHandler);
 router.route("/login").post(loginHandler);
 router.route("/logout/:id").delete(deleteretailer);
 router.route("/auth").get(Authentication);

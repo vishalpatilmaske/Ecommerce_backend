@@ -5,6 +5,7 @@ import retailerValidationSchema from "../validation/retailerValidation.js";
 // retailer signup
 export const signupHandler = async (req, res) => {
   try {
+    console.log("hello");
     const userData = await retailerValidationSchema.validateAsync(req.body);
     const user = await Retailer(userData);
     console.log(userData);

@@ -16,7 +16,7 @@ connection();
 
 // cros origin access
 let originAllow = {
-  origin: "http://localhost:5173",
+  origin: "*",
   methods: "PUT,GET,POST,DELETE,PATCH,HEAD",
   credentials: true,
 };
@@ -32,7 +32,7 @@ app.use("/transpoter", transportRoutes);
 app.use("/order", orderRoutes);
 app.use("/manufacturer", manufacturerRoutes);
 app.use("/retailer", retailerRoutes);
-app.get("/",(req,res)=>{res.send("hello")}) 
+
 app.listen(process.env.PORT || 5000, (err) => {
   console.log("server is running on " + process.env.PORT);
 });
